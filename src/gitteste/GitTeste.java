@@ -10,5 +10,6 @@ public class GitTeste {
 		
 		// Você gosta de pipoca?
 		// Não obrigado
+		// :(
 	}
 }
