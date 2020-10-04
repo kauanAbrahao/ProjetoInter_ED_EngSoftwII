@@ -10,7 +10,7 @@ public class Aluno {
 
 
 
-
+//	Métodos get e set
 	public String getNome() {
 		return nome;
 	}
