@@ -13,9 +13,11 @@ public class Principal {
 			
 			switch(opc) {
 			case 1: principalaluno.interfaceAluno();
+			break;
 			case 2: //;
 			case 3: //;
 			case 9: JOptionPane.showMessageDialog(null, "Finalizado");
+			break;
 			default: JOptionPane.showMessageDialog(null, "Opção inválida, tente novamente");
 			}
 			
