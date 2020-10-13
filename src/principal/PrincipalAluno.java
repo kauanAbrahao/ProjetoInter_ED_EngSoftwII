@@ -19,25 +19,32 @@ public class PrincipalAluno {
 		switch(opc) {
 		case 1:
 			String nome = JOptionPane.showInputDialog("Nome Completo: ");
-			lista_alunos_matriculados.inserirInicio(nome);
+			String curso = JOptionPane.showInputDialog("Curso: ");
+			int id = (int) (Math.random() * 200)+100;
+			lista_alunos_matriculados.inserirInicio(nome, curso, id);
 			break;
 			
 		case 2:
 			String nome1 = JOptionPane.showInputDialog("Nome Completo: ");
-			lista_alunos_matriculados.inserirFim(nome1);
+			String curso1 = JOptionPane.showInputDialog("Curso: ");
+			int id1 = (int) (Math.random() * 200)+100;
+			lista_alunos_matriculados.inserirFim(nome1, curso1, id1);
 			break;
 		
 		case 3:
-			lista_alunos_matriculados.removerInicio();
+			System.out.println(lista_alunos_matriculados.removerInicio());
 			break;
 			
-		case 4: lista_alunos_matriculados.removerFim();
+		case 4: 
+		System.out.println(lista_alunos_matriculados.removerFim());
 		break;
 		
 		case 5:
 			String nome2 = JOptionPane.showInputDialog("Nome Completo: ");
+			String curso2 = JOptionPane.showInputDialog("Curso: ");
+			int id2 = (int) (Math.random() * 200)+100;
 			int pos = Integer.parseInt(JOptionPane.showInputDialog("Posição para inserir: "));
-			lista_alunos_matriculados.inserirPosicao(nome2, pos);
+			lista_alunos_matriculados.inserirPosicao(nome2, curso2, id2, pos);
 			break;
 		
 		case 6:

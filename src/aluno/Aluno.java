@@ -2,6 +2,7 @@ package aluno;
 
 public class Aluno {
 	private String nome;
+	private String curso;
 	private int id;
 	private double nota;
 	Aluno proximo;
@@ -11,8 +12,22 @@ public class Aluno {
 
 
 //	Métodos get e set
+	
+	
 	public String getNome() {
 		return nome;
+	}
+
+
+
+	public String getCurso() {
+		return curso;
+	}
+
+
+
+	public void setCurso(String curso) {
+		this.curso = curso;
 	}
 
 
