@@ -1,15 +1,46 @@
 package principal;
 
+import java.io.FileNotFoundException;
+
 import javax.swing.JOptionPane;
 
 import aluno.ListaDeAlunos;
+import aluno.Login;
 
 public class PrincipalAluno {
 	
-	public void interfaceAluno() {
-		int opc = -1;
-		ListaDeAlunos lista_alunos_matriculados = new ListaDeAlunos();		
+	public void interfaceAluno() throws FileNotFoundException {
 		JOptionPane.showMessageDialog(null, "Você está no SysGETI - Perfil Aluno");
+		int opc_login = -1;
+		int opc = -1;
+				
+		while(opc_login != 9) {
+			opc_login = Integer.parseInt(JOptionPane.showInputDialog("1 - Fazer login" + "\n" + "\n" + "2 - Não sou cadastrado" + "\n" + 
+		"3 - Voltar"));
+			
+			switch(opc_login) {
+			case 1: 
+			Login login = new Login();
+			opc_login = login.run();
+			break;
+			
+			case 2:
+			Login cadastro = new Login();
+			cadastro.cadastrar();
+			break;
+			
+			case 3:
+			opc = 9;
+			opc_login = 9;
+			break;
+			
+			default: JOptionPane.showMessageDialog(null, "Opção Inválida");
+			
+			
+			}
+		}
+		
+		ListaDeAlunos lista_alunos_matriculados = new ListaDeAlunos();		
 		
 		while(opc != 9) {
 			

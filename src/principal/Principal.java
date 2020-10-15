@@ -1,9 +1,11 @@
 package principal;
 
+import java.io.FileNotFoundException;
+
 import javax.swing.JOptionPane;
 
 public class Principal {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException {
 		PrincipalAluno principalaluno = new PrincipalAluno();
 		int opc = -1;
 		
