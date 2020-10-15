@@ -1,7 +1,10 @@
 package aluno;
 
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Scanner;
 
 import javax.swing.JOptionPane;
@@ -34,7 +37,28 @@ public class Login {
 		return r;
 	}
 	
-	public void cadastrar() {
+	public void cadastrar() throws IOException {
+		String pass_cadastra = null;
+		String user_cadastra = JOptionPane.showInputDialog("Escolha um nome de usuário: ");
+		boolean sucesso = false;
 		
+		while(!sucesso) {
+			pass_cadastra = JOptionPane.showInputDialog("Escolha uma senha: ");
+			String confere = JOptionPane.showInputDialog("Confirme a senha: ");
+			if (!pass_cadastra.equals(confere)) {
+				JOptionPane.showMessageDialog(null, "As senhas estão diferentes. Tente novamente.");
+			}
+			else {
+				JOptionPane.showMessageDialog(null, "Cadastrado com sucesso!");
+				sucesso = true;
+			}
+		}
+		String dir = System.getProperty("user.dir");
+		BufferedWriter gravar = new BufferedWriter(new FileWriter(dir + "//Cadastros.txt"));
+		gravar.write(user_cadastra);
+		gravar.newLine();
+		gravar.write(pass_cadastra);
+		gravar.newLine();
+		gravar.close();
 	}
 }

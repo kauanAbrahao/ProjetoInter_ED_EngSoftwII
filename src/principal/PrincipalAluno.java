@@ -1,6 +1,6 @@
 package principal;
 
-import java.io.FileNotFoundException;
+import java.io.IOException;
 
 import javax.swing.JOptionPane;
 
@@ -9,7 +9,7 @@ import aluno.Login;
 
 public class PrincipalAluno {
 	
-	public void interfaceAluno() throws FileNotFoundException {
+	public void interfaceAluno() throws IOException {
 		JOptionPane.showMessageDialog(null, "Você está no SysGETI - Perfil Aluno");
 		int opc_login = -1;
 		int opc = -1;
