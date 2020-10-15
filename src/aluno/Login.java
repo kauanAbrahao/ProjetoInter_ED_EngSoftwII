@@ -11,7 +11,8 @@ public class Login {
 //	Método vai conferir em Cadastros.txt se o candidato já está matriculado no sistema por meio de login e senha
 	public int run() throws FileNotFoundException {
 		int r = 0;
-		Scanner scan = new Scanner(new File("C:\\Users\\knmar\\eclipse-workspace\\ED_EngSoftwareII_Projeto\\Cadastros.txt"));
+		String dir = System.getProperty("user.dir");
+		Scanner scan = new Scanner(new File(dir + "//Cadastros.txt"));
 		String user_fornecido = JOptionPane.showInputDialog("inserir nome de usuário: ");
 		String pass_fornecido = JOptionPane.showInputDialog("Senha:");
 		
@@ -29,6 +30,7 @@ public class Login {
 		if (r == 0) {
 			JOptionPane.showMessageDialog(null, "Usuário ou senha inválidos");
 		}
+		scan.close();
 		return r;
 	}
 	
