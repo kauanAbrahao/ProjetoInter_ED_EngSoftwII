@@ -2,9 +2,13 @@ package aluno;
 
 public class Aluno {
 	private String nome;
-	private String curso;
-	private int id;
-	private double nota;
+	private String telefone;
+	private String cpf;
+	private boolean deferido = false;
+	private double notaCurriculo;
+	private double notaEntrevista;
+	private double notaFinal;
+	boolean classificado;
 	Aluno proximo;
 	Aluno anterior;
 	// Temos que definir quais atributos o Objeto Aluno terá.
@@ -19,45 +23,8 @@ public class Aluno {
 	}
 
 
-
-	public String getCurso() {
-		return curso;
-	}
-
-
-
-	public void setCurso(String curso) {
-		this.curso = curso;
-	}
-
-
-
 	public void setNome(String nome) {
 		this.nome = nome;
-	}
-
-
-
-	public int getId() {
-		return id;
-	}
-
-
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-
-
-	public double getNota() {
-		return nota;
-	}
-
-
-
-	public void setNota(double nota) {
-		this.nota = nota;
 	}
 
 

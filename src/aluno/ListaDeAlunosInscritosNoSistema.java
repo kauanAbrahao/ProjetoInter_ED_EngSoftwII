@@ -1,7 +1,7 @@
 package aluno;
 
 //Lista duplamente encadeada de alunos
-public class ListaDeAlunos {
+public class ListaDeAlunosInscritosNoSistema {
 	Aluno inicio;
 	Aluno fim;
 	int tamanho;
@@ -23,8 +23,6 @@ public class ListaDeAlunos {
 		
 //		Atribuição de nome, curso e id ao aluno
 		novoaluno.setNome(nome);
-		novoaluno.setCurso(curso);
-		novoaluno.setId(id);
 		
 		novoaluno.anterior = null;
 		novoaluno.setProximo(inicio);
@@ -63,8 +61,6 @@ public class ListaDeAlunos {
 		
 //		Atribuição de nome, curso e id ao aluno
 		novoaluno.setNome(nome);
-		novoaluno.setCurso(curso);
-		novoaluno.setId(id);
 		
 		novoaluno.setProximo(null);
 		novoaluno.setAnterior(fim);
@@ -115,8 +111,6 @@ public class ListaDeAlunos {
 			
 //			Atribuição de nome, curso e id ao aluno
 			novoaluno.setNome(nome);
-			novoaluno.setCurso(curso);
-			novoaluno.setId(id);
 			
 			novoaluno.setAnterior(aux);
 			novoaluno.setProximo(aux.getProximo());
@@ -134,7 +128,7 @@ public class ListaDeAlunos {
 		String r = "";
 		Aluno aux = inicio;
 		while (aux != null){
-			r = r + "\n" + "Nome: " + aux.getNome() +" | Curso: " + aux.getCurso() + " | id# " + aux.getId();
+			r = r + "\n" + "Nome: " + aux.getNome();
 			aux = aux.getProximo();
 		}
 		return r;

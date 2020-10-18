@@ -4,7 +4,7 @@ import java.io.IOException;
 
 import javax.swing.JOptionPane;
 
-import aluno.ListaDeAlunos;
+import aluno.ListaDeAlunosInscritosNoSistema;
 import aluno.Login;
 
 public class PrincipalAluno {
@@ -26,7 +26,7 @@ public class PrincipalAluno {
 			
 			case 2:
 			Login cadastro = new Login();
-			cadastro.cadastrar();
+			cadastro.cadastrarCandidato();
 			break;
 			
 			case 3:
@@ -40,7 +40,7 @@ public class PrincipalAluno {
 			}
 		}
 		
-		ListaDeAlunos lista_alunos_matriculados = new ListaDeAlunos();		
+		ListaDeAlunosInscritosNoSistema lista_alunos_matriculados = new ListaDeAlunosInscritosNoSistema();		
 		
 		while(opc != 9) {
 			
