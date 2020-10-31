@@ -13,6 +13,26 @@ public class Usuario {
 	private String login;
 	private String senha;
 	
+	
+	public Usuario(String nome, String email, int cpf, int rg, int cep, int telefone, String endereço, String estado,
+			String cidade, String login, String senha) {
+		this.nome = nome;
+		this.email = email;
+		this.cpf = cpf;
+		this.rg = rg;
+		this.cep = cep;
+		this.telefone = telefone;
+		this.endereço = endereço;
+		this.estado = estado;
+		this.cidade = cidade;
+		this.login = login;
+		this.senha = senha;
+	}
+	
+	
+	//	Método get e set
+	
+	
 	public String getNome() {
 		return nome;
 	}
