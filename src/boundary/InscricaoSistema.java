@@ -1,13 +1,13 @@
-package principal;
+package boundary;
 
 import java.io.IOException;
 
 import javax.swing.JOptionPane;
 
-import aluno.ListaDeAlunosInscritosNoSistema;
-import aluno.Login;
+import control.InscricaoSistemaController;
+import entities.ListaDeAlunosInscritosNoSistema;
 
-public class PrincipalAluno {
+public class InscricaoSistema {
 	
 	public void interfaceAluno() throws IOException {
 		JOptionPane.showMessageDialog(null, "Você está no SysGETI - Perfil Aluno");
@@ -20,12 +20,12 @@ public class PrincipalAluno {
 			
 			switch(opc_login) {
 			case 1: 
-			Login login = new Login();
+			InscricaoSistemaController login = new InscricaoSistemaController();
 			opc_login = login.run();
 			break;
 			
 			case 2:
-			Login cadastro = new Login();
+			InscricaoSistemaController cadastro = new InscricaoSistemaController();
 			cadastro.cadastrarCandidato();
 			break;
 			

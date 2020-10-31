@@ -1,9 +1,9 @@
-package aluno;
+package entities;
 
 //Lista duplamente encadeada de alunos
 public class ListaDeAlunosInscritosNoSistema {
-	Aluno inicio;
-	Aluno fim;
+	Usuario inicio;
+	Usuario fim;
 	int tamanho;
 	
 	public boolean isEmpty() {
@@ -19,7 +19,7 @@ public class ListaDeAlunosInscritosNoSistema {
 	
  
 	public void inserirInicio(String nome, String curso, int id) {
-		Aluno novoaluno = new Aluno();
+		Usuario novoaluno = new Usuario();
 		
 //		Atribuição de nome, curso e id ao aluno
 		novoaluno.setNome(nome);
@@ -57,7 +57,7 @@ public class ListaDeAlunosInscritosNoSistema {
 //	---------------------------------------------------------------------
 	
 	public void inserirFim(String nome, String curso, int id) {
-		Aluno novoaluno = new Aluno();
+		Usuario novoaluno = new Usuario();
 		
 //		Atribuição de nome, curso e id ao aluno
 		novoaluno.setNome(nome);
@@ -103,11 +103,11 @@ public class ListaDeAlunosInscritosNoSistema {
 		} else if (pos >= tamanho) {
 			inserirFim(nome, curso, id);
 		} else {
-			Aluno aux = inicio;
+			Usuario aux = inicio;
 			for(int i = 0; i < pos-1; i++) {
 				aux = aux.getProximo();
 			}
-			Aluno novoaluno = new Aluno();
+			Usuario novoaluno = new Usuario();
 			
 //			Atribuição de nome, curso e id ao aluno
 			novoaluno.setNome(nome);
@@ -126,7 +126,7 @@ public class ListaDeAlunosInscritosNoSistema {
 //	-----------------------------------------------------------
 	public String mostraLista() {
 		String r = "";
-		Aluno aux = inicio;
+		Usuario aux = inicio;
 		while (aux != null){
 			r = r + "\n" + "Nome: " + aux.getNome();
 			aux = aux.getProximo();

@@ -1,6 +1,7 @@
-package aluno;
+package control;
 
 import java.io.BufferedWriter;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
@@ -11,7 +12,7 @@ import java.util.regex.Pattern;
 
 import javax.swing.JOptionPane;
 
-public class Login {
+public class InscricaoSistemaController {
 
 //	Método vai conferir em Cadastros.txt se o candidato já está matriculado no sistema por meio de login e senha
 	public int run() throws FileNotFoundException {
@@ -41,14 +42,14 @@ public class Login {
 	
 //	----------------------------------------------------------------------------------------------------
 	public void cadastrarCandidato() throws IOException {
-		String nome = "";
+		String nome = null;
 		String telefone = "";
 		String cpf = "";
 		String pass_cadastra = null;
 		String user_cadastra = JOptionPane.showInputDialog("Escolha um nome de usuário: ");
 		boolean sucesso = false;
 		
-		while(!sucesso) {
+		while(!sucesso) { //Toda a lógica para cadastrar usuário e senha está dentro deste while
 			sucesso = cadastraUsuarioSenha(user_cadastra, pass_cadastra);
 		}
 		cadastraDados(nome, telefone, cpf);
@@ -135,8 +136,7 @@ public class Login {
 			gravar.newLine();
 			gravar.close();
 		}
-		
-//		---------------------------------------------------------------------------------------------------------
+		//		---------------------------------------------------------------------------------------------------------
 		public void gravaCadastroNomeTelefoneCpf(String dir, BufferedWriter gravar, String nome, String telefone, String cpf) throws IOException {
 			gravar.write(nome);
 			gravar.newLine();

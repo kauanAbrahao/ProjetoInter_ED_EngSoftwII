@@ -1,4 +1,4 @@
-package principal;
+package boundary;
 
 import java.io.IOException;
 
@@ -6,7 +6,7 @@ import javax.swing.JOptionPane;
 
 public class Principal {
 	public static void main(String[] args) throws IOException {
-		PrincipalAluno principalaluno = new PrincipalAluno();
+		InscricaoSistema principalaluno = new InscricaoSistema();
 		int opc = -1;
 		
 		while (opc!= 9) {
