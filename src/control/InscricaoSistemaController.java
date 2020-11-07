@@ -1,7 +1,6 @@
 package control;
 
 import java.io.BufferedWriter;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
@@ -43,8 +42,8 @@ public class InscricaoSistemaController {
 //	----------------------------------------------------------------------------------------------------
 	public void cadastrarCandidato() throws IOException {
 		String nome = null;
-		String telefone = "";
-		String cpf = "";
+		String telefone = null;
+		String cpf = null;
 		String pass_cadastra = null;
 		String user_cadastra = JOptionPane.showInputDialog("Escolha um nome de usuário: ");
 		boolean sucesso = false;
@@ -53,6 +52,7 @@ public class InscricaoSistemaController {
 			sucesso = cadastraUsuarioSenha(user_cadastra, pass_cadastra);
 		}
 		cadastraDados(nome, telefone, cpf);
+		
 				
 	}
 	
@@ -78,7 +78,7 @@ public class InscricaoSistemaController {
 		
 	}
 //	-------------------------------------------------------------------------------------------------------
-	private void cadastraDados(String nome, String telefone, String cpf ) throws IOException {
+	private void cadastraDados(String nome, String telefone, String cpf) throws IOException {
 		
 		JOptionPane.showMessageDialog(null, "Agora, vamos cadastrar seus dados!");
 		boolean valido = false;
@@ -113,7 +113,8 @@ public class InscricaoSistemaController {
 		//Grava usuário e senha no arquivo txt
 		String dir = System.getProperty("user.dir");
 		BufferedWriter gravar = new BufferedWriter(new FileWriter(dir + "//Cadastros.txt", true));
-		gravaCadastroNomeTelefoneCpf(dir, gravar, nome, telefone, cpf);		
+		gravaCadastroNomeTelefoneCpf(dir, gravar, nome, telefone, cpf);
+		
 	}
 	
 //		---------------------------------------------------------------------------------------------------------

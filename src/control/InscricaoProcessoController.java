@@ -1,12 +1,8 @@
 package control;
 
 import java.io.BufferedWriter;
-
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -14,39 +10,12 @@ import javax.swing.JOptionPane;
 
 public class InscricaoProcessoController {
 
-//	Método vai conferir em Cadastros.txt se o candidato já está matriculado no sistema por meio de login e senha
-	public int run() throws FileNotFoundException {
-		int r = 0;
-		String dir = System.getProperty("user.dir");
-		Scanner scan = new Scanner(new File(dir + "//Cadastros.txt"));
-		String user_fornecido = JOptionPane.showInputDialog("inserir nome de usuário: ");
-		String pass_fornecido = JOptionPane.showInputDialog("Senha:");
-		
-		while(scan.hasNext()) {
-			String user = scan.nextLine();
-			String pass = scan.nextLine();
-			
-			
-			if(user_fornecido.equals(user) && pass_fornecido.equals(pass)) {
-				JOptionPane.showMessageDialog(null, "Bem-vindo ao SysGETI - Perfil Aluno");
-				r = 9;
-				break;
-			}
-		}
-		if (r == 0) {
-			JOptionPane.showMessageDialog(null, "Usuário ou senha inválidos");
-		}
-		scan.close();
-		return r;
-	}
 	
 //	----------------------------------------------------------------------------------------------------
-	public void inscricao() throws IOException {
-		String curso = "";
-		String curriculo = "";
-		String documentos = "";
+	public int inscricao() throws IOException {
 		
-		cadastraDados(curso, curriculo, documentos);
+		return 9;
+		
 				
 	}
 	
@@ -113,4 +82,5 @@ public class InscricaoProcessoController {
 		gravar.newLine();
 		gravar.close();
 		}
+	
 }

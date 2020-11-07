@@ -6,7 +6,7 @@ import javax.swing.JOptionPane;
 
 public class Principal {
 	public static void main(String[] args) throws IOException {
-		InscricaoSistema principalaluno = new InscricaoSistema();
+		InscricaoSistema boundary_inscricao_sistema = new InscricaoSistema();
 		int opc = -1;
 		
 		while (opc!= 9) {
@@ -14,7 +14,7 @@ public class Principal {
 					"\n" + "2 - Plataforma CRA" + "\n" + "3 - Plataforma CPS " + "\n" + "\n" + "9 - Finalizar"));
 			
 			switch(opc) {
-			case 1: principalaluno.interfaceAluno();
+			case 1: boundary_inscricao_sistema.interfaceAluno();
 			break;
 			case 2: //;
 			case 3: //;

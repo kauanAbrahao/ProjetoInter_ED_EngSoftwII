@@ -1,32 +1,23 @@
 package entities;
 
 public class Usuario {
+	Usuario anterior;
+	Usuario proximo;
 	private String nome;
-	private String email;
-	private int cpf;
-	private int rg;
-	private int cep;
-	private int telefone;
-	private String endereço;
-	private String estado;
-	private String cidade;
+	private String cpf;
+	private String telefone;
 	private String login;
 	private String senha;
+	private int rg;
 	
 	
-	public Usuario(String nome, String email, int cpf, int rg, int cep, int telefone, String endereço, String estado,
-			String cidade, String login, String senha) {
+	
+	public Usuario(String nome) {
 		this.nome = nome;
-		this.email = email;
-		this.cpf = cpf;
-		this.rg = rg;
-		this.cep = cep;
-		this.telefone = telefone;
-		this.endereço = endereço;
-		this.estado = estado;
-		this.cidade = cidade;
-		this.login = login;
-		this.senha = senha;
+	}
+	
+	public Usuario() {
+		
 	}
 	
 	
@@ -39,53 +30,20 @@ public class Usuario {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	public int getCpf() {
+	public String getCpf() {
 		return cpf;
 	}
-	public void setCpf(int cpf) {
+	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
 	public int getRg() {
 		return rg;
 	}
-	public void setRg(int rg) {
-		this.rg = rg;
-	}
-	public int getCep() {
-		return cep;
-	}
-	public void setCep(int cep) {
-		this.cep = cep;
-	}
-	public int getTelefone() {
+	public String getTelefone() {
 		return telefone;
 	}
-	public void setTelefone(int telefone) {
+	public void setTelefone(String telefone) {
 		this.telefone = telefone;
-	}
-	public String getEndereço() {
-		return endereço;
-	}
-	public void setEndereço(String endereço) {
-		this.endereço = endereço;
-	}
-	public String getEstado() {
-		return estado;
-	}
-	public void setEstado(String estado) {
-		this.estado = estado;
-	}
-	public String getCidade() {
-		return cidade;
-	}
-	public void setCidade(String cidade) {
-		this.cidade = cidade;
 	}
 	public String getLogin() {
 		return login;
@@ -98,6 +56,22 @@ public class Usuario {
 	}
 	public void setSenha(String senha) {
 		this.senha = senha;
+	}
+
+	public Usuario getAnterior() {
+		return anterior;
+	}
+
+	public void setAnterior(Usuario anterior) {
+		this.anterior = anterior;
+	}
+
+	public Usuario getProximo() {
+		return proximo;
+	}
+
+	public void setProximo(Usuario proximo) {
+		this.proximo = proximo;
 	}
 	
 

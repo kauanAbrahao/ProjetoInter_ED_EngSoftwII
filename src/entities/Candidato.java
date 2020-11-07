@@ -1,8 +1,9 @@
 package entities;
 
-public class Candidato extends Usuario {
+public class Candidato{
 
 	ProcessoSeletivo processo;
+	Usuario usuariocadastrado;
 	int notaLattes;
 	int notaEntrevista;
 	int notaFinal;
@@ -11,11 +12,11 @@ public class Candidato extends Usuario {
 	
 //	Caso precise alterar o construtor:
 	
-	public Candidato(String nome, String email, int cpf, int rg, int cep, int telefone, String endereço, String estado,
-			String cidade, String login, String senha) {
-		super(nome, email, cpf, rg, cep, telefone, endereço, estado, cidade, login, senha);
-	}
 
+		public Candidato(Usuario usuario, ProcessoSeletivo processo) {
+			this.usuariocadastrado = usuario;
+			this.processo = processo;
+		}
 	
 //	Métodos get e set
 

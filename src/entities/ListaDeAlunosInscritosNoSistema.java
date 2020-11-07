@@ -1,5 +1,6 @@
 package entities;
 
+
 //Lista duplamente encadeada de alunos
 public class ListaDeAlunosInscritosNoSistema {
 	Usuario inicio;
@@ -19,18 +20,18 @@ public class ListaDeAlunosInscritosNoSistema {
 	
  
 	public void inserirInicio(String nome, String curso, int id) {
-		Usuario novoaluno = new Usuario();
+		Usuario novousuario = new Usuario();
 		
 //		Atribuição de nome, curso e id ao aluno
-		novoaluno.setNome(nome);
+		novousuario.setNome(nome);
 		
-		novoaluno.anterior = null;
-		novoaluno.setProximo(inicio);
+		novousuario.anterior = null;
+		novousuario.setProximo(inicio);
 		
 		if (inicio != null) {
-			inicio.setAnterior(novoaluno);
+			inicio.setAnterior(novousuario);
 		}
-		inicio = novoaluno;
+		inicio = novousuario;
 		if (isEmpty()) {
 			fim = inicio;
 		}
@@ -135,4 +136,4 @@ public class ListaDeAlunosInscritosNoSistema {
 	}
 	
 	
-}
+} 
